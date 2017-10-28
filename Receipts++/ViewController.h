@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Receipts__+CoreDataModel.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UITableViewDataSource>
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property NSMutableArray *receipts;
+@property NSMutableArray *tags;
 
 @end
 
